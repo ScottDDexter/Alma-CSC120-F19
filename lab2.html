@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+      <!-- Always force latest IE rendering engine & Chrome Frame -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+      <meta http-equiv="cleartype" content="on"/>
+
+<title>Lab 2: Getting a Sense of Data</title>
+
+    <!-- Responsive and mobile friendly stuff -->
+    <!-- Stylesheets -->
+         <link rel="stylesheet" type="text/css" href="css/html5reset.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/col.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/8cols.css" media="all">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body>
+  <div class="section group">
+    <div class="coursename span_8_of_8">
+      <a href="../index.html">CSC 120</a>
+    </div>
+  </div>
+
+  <h2>Lab 2: Getting a Sense of Data</h2>
+
+  <h3>Objectives:</h3>
+
+  <ul>
+    <li>Use the jGRASP "canvas" to inspect/visualize/"see" how your program manipulates data.</li>
+    <li>Use the canvas to study the effect of assignment and operators.</li>
+    <li>Use <code>Scanner</code> objects to do some basic user interaction.</li>
+    <li>Use the canvas to explore the effects of data conversions.</li>
+  <ul/>
+
+  <h3>Part Ia: Introduction to the jGRASP canvas.</h3>
+
+    <p>I'll show how you to use the canvas to look at the data of a program as it changes. The canvas lets us run a program very slowly&mdash;step by step, or line by line&mdash; and see what effect each line has. ()I'll introduce the terms "static" and "dynamic" for talking
+      about different aspects of a program.)</p>
+
+    <p>Type in Listing 2.6 (make sure you save it in a file named <code>Geometry.java</code>). Once you have it executing properly, use the canvas to watch the value of <code>sides</code> change. The idea presented here&mdash;that a variable is a "box" that contains a piece of information, is a very useful idea. Not suprisingly, the book uses basically the same idea on p. 43 and again on p. 45. I'll use it a lot on the board, too, and you may find yourself using it, too.</p>
+
+    <h3>Part Ib: Slightly advanced canvas features</h3>
+
+    <p>If you're like me, you like to poke around the menus of new programs. So, add a few variables to your <code>Geometry</code> code (you don't need to do anything with them, just declare and initialize them.) Run the program in the canvas, and add these new variables to the canvas. Click on one of them, and you'll see that box with some triangles. Click on the triangle in the top-right corner, and you should see a dropdown menu with 9 items. Some of those just deal with appearance; others deal with some concepts we haven't addressed yet (like "scope"). But look at the options under "Viewer"&mdash;can you figure out what they're doing? Anything at all surprising in those different views?</p>
+
+    <p>Also, note that in the "Help" menue there's a "Help Search" item; if you want to learn more about any of the features of jGRASP, that's not a bad place to start. Some of the "help text" is directed more toward faculty than to students (which is a little odd, I know), but you might pick up some interesting stuff even so.</p>
+
+    <h3>Part II: Assignments and operators</h3>
+
+    <p> Continuing to work in your <code>Geometry</code> program (why not!), type in the code in Exercises 2.6, 2.7, and 2.8 (not Programming Projects&mdash;Exercises!). You may need to declare a few variables to get it to compile and run. The exercises each ask you "what's the value after these statements are executed?" But using the canvas, we can predict the effect of each statement, then check to see whether we were right. So, do that: before you open up the canvas, write down what you think the value of the variables will be after each statement. Then use the canvas to see if you were right. Feel free to add some additional lines with more operators and test yourself in the same way. We'll pause here and talk about any surprising results.</p>
+
+    <h3>Part III: A simple <code>Scanner</code> program</h3>
+
+    <p>We haven't really talked about <code>Scanner</code> objects, but try this: using Listing 2.9 as an example, modify the <code>TempConverter</code> code in Listing 2.7 so that the value to convert (<code>celsiusTemp</code>) is provided by the user (via a <code>Scanner</code>, of course) instead of being "hardcoded" as 24. (This is a really valuable technique for learning how to code, believe it or not: find an example of something that does pretty much what you want to do, then copy and modify it slightly for your purposes. However, be very carefuly to with this kind of copying on programming assignments for this class!)</p>
+
+    <h3>Bonus Part: Data Conversion</h3>
+<p>If time permits, we'll use the canvas to break down the book's discussion of "data conversion" in Section 2.5.
+
+ </Hr/>>
+</body>
+</html>
