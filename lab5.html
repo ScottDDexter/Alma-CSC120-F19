@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+      <!-- Always force latest IE rendering engine & Chrome Frame -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+      <meta http-equiv="cleartype" content="on"/>
+
+<title>Lab 5: Decision Lab</title>
+
+    <!-- Responsive and mobile friendly stuff -->
+    <!-- Stylesheets -->
+         <link rel="stylesheet" type="text/css" href="css/html5reset.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/col.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/8cols.css" media="all">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body>
+  <div class="section group">
+    <div class="coursename span_8_of_8">
+      <a href="../index.html">CSC 120</a>
+    </div>
+  </div>
+
+  <h2>Lab 5: Decision Lab</h2>
+
+  <h3>Objectives:</h3>
+
+  <ul>
+    <li>Use jGRASP to "trace" the progress of a program with conditional statements, and to evaluate condition expressions "on the fly."</li>
+        <li>Practice choosing what kind of conditional to use for a given problem.</li>
+        <li>Practice writing programs that use conditional statements.</li>
+
+  </ul>
+
+  <h2>Tackling Conditionals</h2>
+
+  <p>Before we start working on problems, let's talk a little about how to approach this kind of problem. Deciding what kind of conditional statement to use&mdash;and then figuring out how to implement it&mdash;requires having a pretty solid understanding of the decision (or decisions) your program is going to have to make. It can be really useful to make diagrams of these choices before you start coding. These diagrams can also help clarify things like what variables you might need.</p>
+
+  <p>We'll work a few of these together, and along the way I'll show one important variant of nested <code>if-else</code> statements that the book doesn't address.</p>
+
+  <h2>Small Problems</h2>
+
+
+  <h3>Positive and Negative</h3>
+  <p>Write a Java program that reads an integer value from the user and prints whether it is positive or negative. ("Your number is positive." or "Your number is negative.").</p>
+
+  <h3>Weekdays</h3>
+
+  <p>Write a Java program that reads a number from the user, between 1 and 7, and prints out the name of the corresponding weekday (start with Sunday corresponding to 1).</p>
+
+  <p>Also, write a program that does the opposite: it reads a string from the user and prints out "That is the _____ day of the month" where the blank is "first", "second", and so on. Once you get that working, add behavior so that if the user's input is not the name of a weekday, your program prints a helpful message like, "That's not the name of a weekday."</p>
+
+  <h3>Floating-point Equality</h3>
+
+  <p>Write a Java program that reads in two floating-point numbers and tests whether they are the same up to three decimal places. So, 12.3324 and 12.3327 are "the same" but 12.3331 is different from both.</p>
+
+
+  <h3>Floating-point Sizes</h3>
+  <p>Write a Java program that reads a floating-point number and prints "zero" if the number is zero. Otherwise, print "positive" or "negative". Add "small" if the absolute value of the number is less than 1, or "large" if it exceeds 1,000,000. So, if the input value is -0.43, your program should output "negative small".</p>
+
+
+  <h3>Types of Letters</h3>
+  <p>Write a Java program that asks the user to provide a single character of input. Read this as a <code>String</code>, then output "Vowel" or "Consonant", depending on the user input. If the user input is not a letter (between a and z or A and Z), or is a string of length > 1, print an error message,</p>
+
+  <h3>Leap year</h3>
+
+  <p>Write a Java program that reads a year from the user and decides whether it is a leap year. Years before 1582 are not leap years. Otherwise, years that are divisible by 4 are leap years. Except that years divisible by 100 are <i>not</i> leap years. Except that years divisible by 400 <i>are</i> leap years. (This one benefits from thinking carefully about how to structure your conditional statement.)</p>
+
+  <h3>Days in a Month</h3>
+
+  <p>Write Java program that reads in a month number (1 to 12, corresponding to January to December), and a year, and prints out the number of days in that month. Remember:
+    <pre>
+Thirty days have November,
+April, June, and September.
+With 28 there is but one.
+All the rest have thirty-one.</pre>
+
+And of course sometimes that 28 is 29....
+
+
+
+
+  <h3>Bonus: Quadratic Equation/Formula</h3>
+
+  <p>You probably remember quadratic equations from math. And maybe even the <a href="https://en.wikipedia.org/wiki/Quadratic_equation">quadratic formula</a>. Write a program that reads three coefficients (a, b, and c) from the user and uses the quadratic formula to calculate the solutions of the quadratic equation ax<span style="vertical-align:super">2</span> + bx + c. The tricky part is the square root--what if the value under the square root is zero or negative?</a>
+
+
+
+
+
+ </h/>
+</body>
+</html>
