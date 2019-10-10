@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+      <!-- Always force latest IE rendering engine & Chrome Frame -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+      <meta http-equiv="cleartype" content="on"/>
+
+<title>Lab 6: Loop Lab</title>
+
+    <!-- Responsive and mobile friendly stuff -->
+    <!-- Stylesheets -->
+         <link rel="stylesheet" type="text/css" href="css/html5reset.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/col.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/8cols.css" media="all">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body>
+  <div class="section group">
+    <div class="coursename span_8_of_8">
+      <a href="../index.html">CSC 120</a>
+    </div>
+  </div>
+
+  <h2>Lab 6: Loop Lab</h2>
+
+  <h3>Objectives:</h3>
+
+  <ul>
+    <li>Understand some of the different semantic  "loop patterns" that are available to be used in your code.</li>
+    <li> Understand the relationships among the three Java loop statements.</li>
+    <li>Apply these principles in the writing of some loop applications</li>
+  </ul>
+
+  <h3>Loop Patterns</h3>
+
+  <p>The book talks about a few useful loop patterns, though it doesn't call them patterns, exactly (sometimes you'll see this kind of thing referred to as a loop <em>idiom</em>):
+    <ul>
+      <li>Input validation. Here, we read an input value, then enter a loop that repeats until the user actually gives us a valid value.</li>
+      <li>Sentinels. Here, the loop repeats until a particular value is encountered.</li>
+      <li>Accumulators (which is a general form of what the book calls "running sum"). Here, the loop progresses through a series of values and "accumulates" them somehow, most commonly by adding them.</li>
+      <li>Counting loops. Here, the loop keeps track of how many times it has repeated. This could either be a "definite" counting loop, where we count the repetitions so that we can stop after a fixed number (this is what a for loop is often used for), or an "indefinite" counting loop, where the stopping point isn't known ahead of time, and the whole point of the loop is to count how repetitions were required (for example, how many times can we cut <code>n</code> in half before the result is 1?)</li>
+    </ul>
+
+  <p>There are many examples of these in chapter 11 of <a href="http://faculty.salina.k-state.edu/tmertz/Java/">The Java Files</a>; consider this an assigned reading for the weekend! We'll discuss several of these on Monday.</p>
+
+
+  <h3>Live Coding</h3>
+
+  <p>Let's work together on a couple short programs, then I'll give you some more complex problems to work on. Let's look at the first and second programming exercises <a href="http://faculty.salina.k-state.edu/tmertz/Java/044programmingwithcontrolstatements/04countingloopsandaccumulators.pdf">here</a>. We'll look at using different kinds of loops to solve these problems.</p>
+
+  <h3>Two Programs</h3>
+
+  <p>For the rest of today's lab, work on two programs. First, do PP 4.8 from the book&mdash;implementing a simple guessing game with a sentinel value indicating the user wants to stop guessing.</p>
+
+
+  <p>Then, you'll be able to use a lot of that basic program structure to tackle exercise 6 on <a href="http://faculty.salina.k-state.edu/tmertz/Java/044programmingwithcontrolstatements/07maxminaverage.pdf">this page</a>. We'll adapt the exercise that we read data from the user (the keyboard), and we'll also add input validation that prints a message about any badly structured line of input, ignores the line, and continues prompting the user for input. I'll point out a few things, but as you get started, here's how I recommend you approach this:
+    <ul>
+      <li>First, write a pretty simple version of this in which each line of input is just a name or "stop." Print the names but not the sentinel value.</li>
+      <li>Once you have that working, add the ability to read name-plus-height from each line. For now, assume all the lines are correctly formatted. Print each nane and height but not the sentinel.</li>
+      <li>Once you have the input working, add the average calculations (average boy height, average girl height, average of all). (Feel free to replace "boy" and "girl" with less reductive categories&mdash;maybe these are dogs and cats, or robots and aliens.)</li>
+      <li>Now add logic that detects "bad" input and ignores it.</li>
+
+      </ul>
+
+
+
+ <hr/>
+</body>
+</html>
