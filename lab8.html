@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+      <!-- Always force latest IE rendering engine & Chrome Frame -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+      <meta http-equiv="cleartype" content="on"/>
+
+<title>Lab 8: Class Design</title>
+
+    <!-- Responsive and mobile friendly stuff -->
+    <!-- Stylesheets -->
+         <link rel="stylesheet" type="text/css" href="css/html5reset.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/col.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/8cols.css" media="all">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body>
+  <div class="section group">
+    <div class="coursename span_8_of_8">
+      <a href="../index.html">CSC 120</a>
+    </div>
+  </div>
+
+
+  <h2>Lab 8: Class Design</h2>
+
+  <h3>Objectives:</h3>
+
+  <ul>
+    <li>Implement a class based on a "driver" program that illustrates/demonstrates the use of the class.</li>
+    <li>Implement methods to meet their "use cases."</li>
+    <li>Design a simple class "from scratch" and write a driver that uses it.</li>
+  </ul>
+
+
+<h3>1. Triangle</h3>
+
+  <p>In class yesterday, you wrote an instance method <code>isIsosceles</code> for a <code>Triangle</code>. It took three parameters and told you whether those side lengths represented an isosceles triangle. Now, let's make a "better" <code>Triangle</code> class. Copy and paste the code below into jGRASP, and save it (it should save as <code>TriangleDriver.java</code>).</p>
+  <p>By the end of lab, you'll have this working, but right now it doesn't work at all. Let's go back to the mindset of our very first lab, and keep an eye out for interesting compilation errors and other behavior that signals problems in our code. First of all: what happens if you try to run <code>TriangleDriver</code>?</p>
+
+  <p>As we proceed through the lab, I want you to do the <b>minimum</b> amount of work at each stage to fix each problem. We can fix the problem above just by defining a <i>very very simple</i> <code>Triangle</code> class. Hint: a class doesn't need to have any methods or variables defined.</p>
+
+  <p>Once you think you've solved the problem, try to compile the driver again. Hopefully, the errors you saw before are gone, but now you have a bunch of new ones: the compiler can find a Triangle class, but it can't find any of the methods you're trying to call. What's the <b>minimum</b> amount of work you can do to fix this problem? (Hint: the compiler doesn't give a crap about what these methods DO.)</p>
+
+  <p>So, fix all those errors (it will probably take a few tries). Now what happens when you try to compile and run the driver? It <i>should</i> run... but it probably doesn't work <i>correctly</i>. So now is the "hard work." But notice: the work you're doing at this point is really stuff from Chapters 2&ndash;4. You already know everything you need to know to <i>implement</i> methods; what we're adding this week is the knowledge of designing the whole class that "contains" these methods.</p>
+
+  <p>When you have the triangle code working, switch gears and do PP 5.5, which asks you to create a simple class definition (for a <code>Dog</code> class) and a driver class(<code>Kennel</code>). Here, the problem description describes fairly closely what the <code>Dog</code> methods needs to do, but you still have to figure out how to turn that description into code, and <i>then</i> write a driver class that "tests" your work.</p>
+
+  <p>Turn in 3 Java files, for <code>Triangle</code>, <code>Dog</code>, and <code>Kennel</code>. </p>
+
+
+
+    <hr/>
+    <pre>
+import java.util.Scanner;
+
+public class TriangleDriver {
+
+   public static void main(String[] args) {
+      int side1, side2, side3;
+
+      Scanner scan = new Scanner(System.in);
+
+      System.out.print("Enter 3 integer values, separated by spaces, representing 3 sides of a triangle: ");
+      side1 = scan.nextInt();
+      side2 = scan.nextInt();
+      side3 = scan.nextInt();
+
+      // will every set of 3 integers form a triangle? something to think about later...
+
+      Triangle triangle = new Triangle(side1,side2,side3);
+
+      // note that we need to print the triangle... remember that the toString() method should
+      // return a String that somehow 'represents' the Triangle
+
+      if (triangle.isIsosceles()) {
+         System.out.println("The triangle " + triangle + " is isosceles.");
+      } else if (triangle.isEquilateral()) {
+         System.out.println("The triangle " + triangle + " is equilateral.");
+      } else {
+         System.out.println("The triangle " + triangle + " is totally uninteresting.");
+      }
+
+      System.out.println("The longest side of " + triangle + " is " + triangle.longestSide());
+
+      // use Heron's formula https://en.wikipedia.org/wiki/Heron%27s_formula for this
+
+      System.out.println("The area of " + triangle + " is " + triangle.area());
+
+      // this is for extra credit-- uncomment the chunk below if you want to work on this
+
+      /*******
+      System.out.print("Enter the sides of another triangle: ");
+      side1 = scan.nextInt();
+      side2 = scan.nextInt();
+      side3 = scan.nextInt();
+
+      Triangle anotherTriangle = new Triangle(side1,side2,side3);
+
+      if (anotherTriangle.compareTo(triangle) > 0) {
+         System.out.println("How exciting! The second triangle is bigger than the first!");
+      } else {
+         System.out.println("Couldn't you have provided a bigger triangle?");
+      }
+      *******/
+   }
+}</pre>
+
+
+
+
+ <hr/>
+</body>
+</html>
