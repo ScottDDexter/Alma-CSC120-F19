@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+<title>Project 2: Die Game, Die (Game)</title>
+
+    <!-- Responsive and mobile friendly stuff -->
+    <!-- Stylesheets -->
+         <link rel="stylesheet" type="text/css" href="css/html5reset.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/col.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/8cols.css" media="all">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body>
+  <div class="section group">
+    <div class="coursename span_8_of_8">
+      <a href="../index.html">CSC 120</a>
+    </div>
+  </div>
+
+
+  <h2>Project 2: Die Game, Die (Game)</h2>
+
+  <h3>Overview and Game Rules</h3>
+
+  <p>The number of interesting games you can play with a single die is pretty small (maybe it's 0?). But there are at least a couple <i>slightly</i> interesting games. In this program, you'll create two of these games for two players.
+    <h4>101 and Out</h4>
+
+  <p>The first game is called <i>101 and Out</i>. In this game, the players takes turns rolling the die, for a total of 6 rounds. At each turn, the player chooses whether to score the die as a "10s" or a "1s." So, a roll of 1 can be scored as 10 or as 1, a roll of 2 can be scored either as 20 or as 2, and so on. The winner is the player whose score after 6 rounds is closest to 101 without going over. (As soon as one player goes over, the other player wins.)</p>
+
+  <h4>Trash Can</h4>
+
+  <p><i>Trash Can</i> is similar, but is played with only 4 rounds. Here, each player has four "slots" in which to put a roll: the hundreds slot, the tens slot, the ones slot, and the trash can. At each roll, the player chooses where to put the roll; the winner is the player with the largest number represented by the hundres, tens, and ones slot. (That is, if you roll a 4 and put it in tens, a 2 in the trash can, another 4 in ones, and a 3 in hundreds, your score is 344.) I suppose that because the best possible score is 666, you could call this game <i>Satan's Trash Can</i> if you were so inclined.</p>
+
+    <h3>Your Task</h3>
+
+  <p>Your program first should ask which game to play (or to quit). Once that selection is made, the game should be played, with appropriate prompts; the computer should announce the winner as soon as possible. A couple "transcripts" of some games are below, as well as some possibilities for extra credit.</p>
+
+  <h4>Classes and Objects</h4>
+
+  <p>Use the book's <code>Die</code> class (attached to this assignment). Create two classes, <code>OneOhOnePlayer</code> and <code>TrashCanPlayer</code>, which both keep track of each player's "game state" and also prompt the player for selections when needed. Each round of the game should create two new player objects of the appropriate class. Your <code>main()</code> method should manage the game loops and detect and announce winning conditions. Be sure your player objects are well-encapsulated: your main() method shouldn't be able to <i>directly</i> access a player's instance variables but should be able to ask for whatever information it needs. You should find that the essential design the two player classes is pretty much the same, though of course some instance variables and method implementations will be different.</p>
+
+  <p>Note that while I have given you some guidance what classes/objects your program should have, I haven't given you a lot of guidance about the design of each class. As we've done before, ask yourself what <em>attributes</em> your player objects should have, and what <em>behaviors</em>. There is no single correct answer here, but keep in mind the ideas of enapsulation and self-governance: each player should take care of its own business, and "outsiders" should have very little to do with the interior details.</p>
+
+
+<h3>Submitting</h3>
+  <p>As for the first project, you should have perfect style, and your code should be nicely documented. In particular, every class should have a short general description before the class definition, and every method should have a description of its behavior, including what its parameters are for and what its return values mean.</p>
+
+  <p>It's up to you how you manage the input (the transcript below is just to give you a sense). Feel free to ask for players' names so you don't have to use "Player 1" and "Player2." You should do input validation.
+
+  <p>You should submit all source files necessary for your program (most likely, 4 of them).</p>
+
+  <hr/>
+
+  <h4><strong>101 and Out</strong> Transcript</h4>
+
+  <pre>
+    Welcome to 101 and Out!
+    Player 1 (score: 0), for roll 1 you rolled a 4. Score as (O)nes or (T)ens? T
+    Your current total is 40.
+    Player 2 (score: 0), for roll 1 you rolled a 1. Score as (O)nes or (T)ens? O
+    Your current total is 1.
+    Player 2 (score: 40), for roll 2 you rolled a 6. Score as (O)nes or (T)ens? T
+    Your current total is 100.
+    Player 2 (score: 1), for roll 2 you rolled a 5. Score as (O)nes or (T)ens? T
+    Your current total is 51.
+    Player 1 (score: 100), for roll 3 you rolled a 3. Score as (O)nes or (T)ens? O
+    Your current total is 103.
+    Player 2 is over! Player 1 wins!</pre>
+
+  <p><em>Extra Credit:</em> Make your player class "smart" enough to recognize situations like this last roll: it doesn't matter whether it's played as a one or a ten; the player is still going to go over. Relatedly, if the roll had been a 1, you could automatically play it as a one (because playing as a ten would go over). Your program should announce these actions, of course, rather than prompting the player for a choice.</p>
+
+  <h4><strong>Trash Can</strong> Transcript</h4>
+  <pre>
+    Welcome to Trash Can!
+    Player 1 (_ _ _  _), for roll 1, you rolled a 3. Place in (H)undreds, (T)ens, (O)nes, or the (C)an? T
+    Your board: _ 3 _  _
+    Player 2 (_ _ _  _), for roll 1, you rolled a 4. Place in (H)undreds, (T)ens, (O)nes, or the (C)an? H
+    Your board: 4 _ _  _
+
+    Player 1 (_ 3 _  _), for roll 2, you rolled a 5. Place in (H)undreds, (T)ens, (O)nes, or the (C)an? H
+    Your board: 5 3 _  _
+    Player 2 (4 _ _  _), for roll 2, you rolled a 1. Place in (H)undreds, (T)ens, (O)nes, or the (C)an? C
+    Your board: 4 _ _  1
+
+    Player 1 (5 3 _  _), for roll 3, you rolled a 2. Place in (H)undreds, (T)ens, (O)nes, or the (C)an? C
+    Your board: 5 3 _  2
+    Player 2 (4 _ _  1), for roll 3, you rolled a 1. Place in (H)undreds, (T)ens, (O)nes, or the (C)an? C
+    Bummer; your can is already full. Place in (H)undreds, (T)ens, (O)nes, or the (C)an? O
+    Your board: 4 _ 1  1
+
+    Player 1 (5 3 _  2), for roll 4, you rolled a 6. Place in (H)undreds, (T)ens, (O)nes, or the (C)an? O
+    Your board: 5 3 6  2
+    Player 2 (4 _ 1  1), for roll 4, you rolled a 3. Place in (H)undreds, (T)ens, (O)nes, or the (C)an? T
+    Your board: 4 3 1  1
+    Player 1 wins, 536 to 431!</pre>
+
+  <p><em>Extra Credit:</eM> Again, make your player class smarter: only allow the option to select empty slots, and announce the winner as soon as possible (in this game, it was obvious by the end of round 2 that player 1 would win).</p>
+
+<p>If you do either of these extra credits, please MAKE A NOTE of it in your comments at the top of the relevant file.</p>
+<hr/>
+
+
+
+
+
+</body>
+</html>
