@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+<title>Lab 9: Tetsing and Debugging</title>
+
+    <!-- Responsive and mobile friendly stuff -->
+    <!-- Stylesheets -->
+         <link rel="stylesheet" type="text/css" href="css/html5reset.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/col.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/8cols.css" media="all">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body>
+  <div class="section group">
+    <div class="coursename span_8_of_8">
+      <a href="../index.html">CSC 120</a>
+    </div>
+  </div>
+
+
+  <h2>Lab 9: Testing and Debugging</h2>
+
+  <h3>Objectives:</h3>
+
+  <ul>
+    <li>Understand the difference between black-box and white-box texting.</li>
+    <li>Design black-box tests for a given problem.</li>
+    <li>Design white-box tests for a given piece of code.</li>
+    <li>Implement a simple "test driver" for some unit testing.</li>
+  </ul>
+
+  <h3>Overview</h3>
+
+  <p>As the book says, "black box" testing is when we devise tests based on the <i>expected behavior</i> of our code (we don't have any information about how the code is implemented&mdash;we don't know what's in the box). "White box" (or "glass box") testing is only possible when we <i>do</i> have access to the implementation: we can use that code to structure our tests, with the goal of making sure that all the code is "exercised" by the test.
+
+    <h3>Part 2: Black Box Testing</h3>
+
+  <p>Write some black box tests for the two problems below. For the purposes of the assignment, write each test on line, formatted like this:</p>
+
+  <p><code>[input values]  [correct result] [comment on 'purpose' of test]</code></p>
+
+  <p>For example (for the FizzBuzz problem):</p>
+
+  <p><code>4 4 behavior on even numbers</code></p>
+
+  <h4>Testing: FizzBuzz</h4>
+
+  <p>THere's a famous problem in the programming world called <strong>FizzBuzz</strong>. It's a simple problem: print out the numbers from 1 to 100, but everytime you hit a number divisible by 3, print "Fizz" instead. Every time you hit a number divisible by 5, print "Buzz" instead. If you hit a number divisible by 3 AND 5, print "FizzBuzz." Imagine your colleague has written a method <code>public String fizzBuzzer(int x)</code>, which returns a null reference if <code>x</code> is less than 1, and the string that FizzBuzz should print for <code>x</code>. Write a sequence of tests for the fizzBuzzer method.</p>
+
+  <h4>Testing: Supermarket</h4>
+
+  <p>Supermarket pricing can be tricky: some items have fixed prices, some have special prices if you buy multiples. For example, if a market is selling A, B, C, and D products, they might have pricing rules like this:
+
+    <pre>
+  Item   Unit      Special
+         Price     Price
+  --------------------------
+    A     50       3 for 130
+    B     30       2 for 45
+    C     20
+    D     15</pre>
+
+   <p>Our checkout system can accept items in any order, so that if we scan a B, an A, and another B, we’ll recognize the two B’s and price them at 45 (for a total price so far of 95).</p>
+
+  <p>Suppose we have a <code>scan</code> method that takes in a String representing a sequence of products (like <code>"BAB"</code> and returns an int representing the total price of those products). Write a sequence of tests for this method.</p>
+
+  <h3>Part 3: Test Drivers</h3>
+
+  <p>Testing only works well if it's highly automated. For this final part of the lab, I'll show you a test driver for the Triangle class isIsceles method, and you'll add testing code for isEquilateral and longestSide. <a href="Triangle.class">Here is a Triangle class</a> (but not the source code!) to test. Based on your testing, what seems to be going on with this class?</p>
+
+  <h3>Submission</h3>
+
+  <p>For this lab, submit a text file containing (1) your sequence of tests for fizzBuzzer, (2) your sequence of tests for scan, (3) your diagnosis of the Triangle class you tested.</p>
+
+ <hr/>
+</body>
+</html>
